@@ -4,10 +4,8 @@ import fitz
 from io import BytesIO
 import re
 import pickle
-from flask_cors import CORS 
 
 app = Flask(__name__)
-CORS(app,origins="*")
 rfc_job_recommendation = pickle.load(open('rfc_job_recommendation.pkl', 'rb'))
 tfidf_vectorizer_job_recommendation = pickle.load(open('tfidf_vectorizer_job_recommendation.pkl', 'rb'))
 
