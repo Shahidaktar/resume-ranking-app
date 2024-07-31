@@ -60,7 +60,7 @@ def extract_skills_from_resume(text, skills_list):
 def home():
     return "it works"
 
-@app.route('/recommend-job', methods=['GET'])
+@app.route('/recommend-job', methods=['POST'])
 def pred():
     data = request.get_json()
     if( data):    
@@ -70,7 +70,7 @@ def pred():
     else:
           return "Error"
     
-@app.route('/score', methods=['GET'])
+@app.route('/score', methods=['POST'])
 def score():
     data = request.get_json()
     if( data):    
